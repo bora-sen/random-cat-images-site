@@ -1,15 +1,30 @@
-div{
-    border : 2px solid black;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin:4px;
+    padding: 0;
+    background-color: black;
+}
+.post{
+    background-color: #3f3f3f;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: white;
 }
 .content-img {
     grid-area: ci;
+    width: 58vw;
 }
 .content-img > img {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
 }
 .content-disc{
     grid-area: cd;
+    margin-left: 25px;
 }
 .content-comments{
     grid-area: ccm;
@@ -20,13 +35,51 @@ div{
 .prev-btn{
     grid-area: cnp-btn;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to top left,gray,black)
+}
+.brand-logo >a{
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+.nav-links{
+    display: flex;
+    padding-right: 25px;
+    align-items: center;
+}
+.nav-links a,.nav-links li {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+.nav-links a {
+    padding-left: 20px;
 
-
+}
+.next-btn, .prev-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next-btn a, .prev-btn a{
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in;
+}
+.next-btn a:hover, .prev-btn a:hover {
+    opacity: .45;
+}
+.content-title{
+    font-weight: 700;
+}
 .content-area{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:  2fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template: 
-    "ci ci ccm ccm"
-    "cd cd cnp-btn cnn-btn";
+    "ci ccm ccm"
+    "cd cnp-btn cnn-btn";
 }
