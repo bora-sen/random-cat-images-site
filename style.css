@@ -1,0 +1,32 @@
+div{
+    border : 2px solid black;
+}
+.content-img {
+    grid-area: ci;
+}
+.content-img > img {
+    width: 100%;
+    height: 100%;
+}
+.content-disc{
+    grid-area: cd;
+}
+.content-comments{
+    grid-area: ccm;
+}
+.next-btn {
+    grid-area: cnn-btn;
+}
+.prev-btn{
+    grid-area: cnp-btn;
+}
+
+
+.content-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template: 
+    "ci ci ccm ccm"
+    "cd cd cnp-btn cnn-btn";
+}
